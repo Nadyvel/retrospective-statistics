@@ -6,5 +6,4 @@ const rootReducer = combineReducers({
     statsData,
 });
 
-
 export default rootReducer

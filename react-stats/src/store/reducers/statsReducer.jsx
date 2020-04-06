@@ -1,8 +1,8 @@
 const initialState = {
     statsData: []
-  }
+}
   
-  const statsData = (state = initialState, action) => {
+const statsData = (state = initialState, action) => {
     switch (action.type) {
       case 'STATS_ACTION':
         return {
@@ -13,6 +13,6 @@ const initialState = {
       default:
         return state;
     }
-  }
-  export default statsData
+}
+export default statsData
   
