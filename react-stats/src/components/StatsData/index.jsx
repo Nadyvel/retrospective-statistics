@@ -39,35 +39,35 @@ const StatsData = ({data}) => {
     return (
         <>
           <div className='subtitle'>
-            <p>Repository: {repositorySlug}</p>
-            <p>{Moment(from).format('D MMM Y')} - {Moment(to).format('D MMM Y')}</p>
+            <p className='subtitle'>Repository: {repositorySlug}</p>
+            <p className='subtitle'>{Moment(from).format('D MMM Y')} - {Moment(to).format('D MMM Y')}</p>
           </div>
 
             <div className='stats-data'>
 
                 <div className='pull-requests-created'>
-                    <div style={{fontSize:'80px'}}>{created.count}</div>
-                    <p style={{fontSize:'20px'}}> pull requests created</p>
+                    <div>{created.count}</div>
+                    <p className='under-number-title'> pull requests created</p>
                 </div>
 
                 <div className='pull-requests-merged'>
-                    <div style={{fontSize:'80px'}}>{merged.count}</div>
-                    <p style={{fontSize:'20px'}}> pull requests merged</p>
+                    <div>{merged.count}</div>
+                    <p className='under-number-title'> pull requests merged</p>
                 </div>
 
                 <div className='created-details'>
                     <div className='merges'>
-                        <div style={{fontSize:'30px',}}>{created.merged}</div>
+                        <div className='stats-details-number'>{created.merged}</div>
                         <p>merges</p>
                         <p>{percentageCountMerged()}</p>
                     </div>
                     <div className='declines'>
-                        <div style={{fontSize:'30px',}}>{created.declined}</div>
+                        <div className='stats-details-number'>{created.declined}</div>
                         <p>declines</p>
                         <p>{percentageCountDeclines()}</p>
                     </div>
                     <div className='open'>
-                        <div style={{fontSize:'30px',}}>{created.open}</div>
+                        <div className='stats-details-number'>{created.open}</div>
                         <p>remains open</p>
                         <p>{percentageCountOpen()}</p>
                     </div>
@@ -75,27 +75,27 @@ const StatsData = ({data}) => {
 
                 <div className='merged-details'>
                     <div className='files'>
-                        <div style={{fontSize:'30px',}}>{merged.metrics.changedFiles}</div>
+                        <div className='stats-details-number'>{merged.metrics.changedFiles}</div>
                         <p>files</p>
                     </div>
                     <div className='commits'>
-                        <div style={{fontSize:'30px',}}>{merged.metrics.commitCount}</div>
+                        <div className='stats-details-number'>{merged.metrics.commitCount}</div>
                         <p>commits</p>
                     </div>
                     <div className='comments'>
-                        <div style={{fontSize:'30px',}}>{merged.metrics.commentCount}</div>
+                        <div className='stats-details-number'>{merged.metrics.commentCount}</div>
                         <p>comments</p>
                     </div>
                     <div className='average-days'>
-                        <div style={{fontSize:'30px',}}>{secondsToDays()}</div>
+                        <div className='stats-details-number'>{secondsToDays()}</div>
                         <p>average merge time</p>
                     </div>
                     <div className='due'>
-                        <div style={{fontSize:'30px',}}>{merged.dueDate.due}</div>
+                        <div className='stats-details-number'>{merged.dueDate.due}</div>
                         <p>with due date</p>
                     </div>
                     <div className='merged-in-time'>
-                        <div style={{fontSize:'30px',}}>{percentageMergedInTime()}</div>
+                        <div className='stats-details-number'>{percentageMergedInTime()}</div>
                         <p>merged in time</p>
                     </div>
                 </div>

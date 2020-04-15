@@ -1,22 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
 .subtitle{
     color: white;
     font-family: 'Montserrat';
     font-size: 24px;
     display: flex;
-    max-width: 88%;
+    max-width: 90%;
     line-height: 0;
-    padding-left: 3%;
+    padding-left: 0;
     margin-left: 5%;
     flex-direction: column;
     background-color: rgb(64, 66, 88);
     border-radius: 5px;
 }
 .stats-data{
+    position: relative;
     display: flex;
     max-width: 90%;
     max-height: 100%;
     width: 100%;
-    height: 564px;
+    height: 74vh;
     margin: auto;
     margin-top: 3%;
     margin-bottom: 3%;
@@ -29,34 +32,45 @@
 }
 .pull-requests-created{
     background: linear-gradient(45deg,#843cf7,#38b8f2);
-    width: 20%;
-    border-radius: 3%;
+    width: 20vw;
+    height: 21vh;
+    border-radius: 7px;
     font-size: 40px;
     padding: 2%;
     position: absolute;
-    top: 39%;
-    left: 8%;
+    top: 8vh;
+    left: 3vw;
+    font-size: 80px;
 }
 .pull-requests-merged{
     background: linear-gradient(45deg, #d53369 0%, #daae51 100%);
-    width: 20%;
-    border-radius: 3%;
+    width: 20vw;
+    height: 21vh;
+    border-radius: 7px;
     font-size: 40px;
     padding: 2%;
     position: absolute;
-    top: 72%;
-    left: 8%;
+    top: 40vh;
+    left: 3vw;
+    font-size: 80px;
+}
+
+.under-number-title{
+    font-size: 20px;
 }
 .created-details{
     position: absolute;
     border: 1px solid grey;
     border-radius: 7px;
-    width: 53%;
-    height: 29%;
-    top: 39%;
+    width: 50vw;
+    height: 26.5vh;
+    top: 8vh;
     left: 35%;
     padding: 0px 2%;
     justify-content: space-evenly;
+}
+.stats-details-number{
+    font-size: 30px;
 }
 .merges{
     line-height: 0.5;
@@ -88,9 +102,9 @@
     position: absolute;
     border: 1px solid grey;
     border-radius: 7px;
-    width: 53%;
-    height: 29%;
-    top: 72%;
+    width: 50vw;
+    height: 26.5vh;
+    top: 40vh;
     left: 35%;
     padding: 0px 2%;
 }
@@ -139,4 +153,152 @@
     width: 26%;
     position: absolute;
     left: 70%;
+}
+
+@media (min-width: 350px) and (max-width: 767px){
+    .stats-data{
+        height: 93vh;
+    }
+    .subtitle{
+        font-size: 20px;
+    }
+    .stats-details-number{
+        font-size: 20px;
+    }
+    .pull-requests-created{
+        display: flex;
+        justify-content: space-evenly;
+        width: 80vw;
+        height: 7.4vh;
+        font-size: 40px;
+        top: 3vh;
+    }
+    .pull-requests-merged{
+        display: flex;
+        justify-content: space-evenly;
+        width: 80vw;
+        height: 7.4vh;
+        font-size: 40px;
+        top: 40.6vh;
+    }
+    .created-details{
+        width: 79.5vw;
+        height: 22.5vh;
+        top: 15vh;
+        left: 3vw;
+    }
+    .open{
+        line-height: 1;
+        border-bottom: none;
+        left: 58vw;
+        top: 4vh;
+    }
+    .declines{
+        line-height: 1;
+        border-bottom: none;
+        left: 30vw;
+        top: 4vh;
+    }
+    .merges{
+        line-height: 1;
+        border-bottom: none;
+        left: 2vw;
+        top: 4vh;
+    }
+    .merged-details{
+        width: 80vw;
+        height: 37.5vh;
+        top: 53vh;
+        left: 3vw;
+   }
+    .files{
+        line-height: 1;
+        top: 14%;
+    }
+    .commits{
+        line-height: 1;
+        top: 14%;
+    }
+    .comments{
+        line-height: 1;
+        top: 14%;
+    }
+    .average-days{
+        line-height: 1;
+        top: 58%;
+    }
+    .due{
+        line-height: 1;
+        top: 58%; 
+    }
+    .merged-in-time{
+        line-height: 1;
+        top: 58%;
+    }
+    
+}
+
+/* @media (min-width: 411px) and (max-width: 767px) {
+
+   .pull-requests-merged {
+       width: 76vw;
+       height: 6.4vh;
+       padding: 4%;
+   }
+   .pull-requests-created{
+       width: 76vw;
+       height: 6.4vh;
+       padding: 4%;
+   }
+} */
+
+@media (min-width: 600px) and (max-width: 768px){
+   
+   .pull-requests-created{
+       width: 18vw;
+       height: 21.4vh;
+       padding: 4%;
+   }
+   .pull-requests-merged{
+       width: 18vw;
+       height: 21.4vh;
+       padding: 4%;
+   }
+   .open{
+       line-height: 1;
+   }
+   .declines{
+       line-height: 1;
+       padding-bottom: 4.8%;
+   }
+   .merges{
+       line-height: 1;
+       padding-bottom: 4.8%;
+   }
+
+   .files{
+       line-height: 1;
+       top: 14%;
+   }
+   .commits{
+       line-height: 1;
+       top: 14%;
+   }
+   .comments{
+       line-height: 1;
+       top: 14%;
+   }
+   .average-days{
+       line-height: 1;
+       top: 58%;
+   }
+   .due{
+       line-height: 1;
+       top: 58%; 
+   }
+   .merged-in-time{
+       line-height: 1;
+       top: 58%;
+   }
+  
 }
